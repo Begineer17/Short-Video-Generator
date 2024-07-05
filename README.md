@@ -35,7 +35,7 @@ For combining video frames(.gif) and music(.wav) to video(.mp4) we using ffmpeg:
    
 For track generator: Click [here](https://1drv.ms/u/s!ArHNvccy1VzPkWGKXZDQY5k-kDi4?e=fFxcEq) to download the model checkpoint.
 
-For converting beween .wav and .mid:
+For converting between .wav and .mid:
    * (.wav) -> (.mid):
       (command line) w2m melody.wav melody.mid
    * (.mid) -> (.wav):
