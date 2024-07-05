@@ -2,7 +2,7 @@ import google.generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 import time
 
-GOOGLE_API_KEY = "AIzaSyC5sTsVsqTz64sMdLKlqNWLNPQ4XVPQY10"
+GOOGLE_API_KEY = "YOUR_GEMINI_API"
 genai.configure(api_key=GOOGLE_API_KEY)
 
 model_gemini = genai.GenerativeModel('gemini-1.5-flash')
