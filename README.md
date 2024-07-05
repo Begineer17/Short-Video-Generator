@@ -15,16 +15,16 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 **Notice**: Get and replace <YOUR_GEMINI_API> with your actual Gemini API key!!! 
 
 For combining video frames(.gif) and music(.wav) to video(.mp4) we using ffmpeg:
-   Step 1: Download packages at link: https://ffmpeg.org/download.html.
-   Step 2: Unzip file and copy link 'bin' folder into PATH environment. 
-
+   * Step 1: Download packages at link: https://ffmpeg.org/download.html.
+   * Step 2: Unzip file and copy link 'bin' folder into PATH environment. 
+   
 For track generator: 
    Click [here](https://1drv.ms/u/s!ArHNvccy1VzPkWGKXZDQY5k-kDi4?e=fFxcEq) to download the model checkpoint.
 
 For converting beween .wav and .mid:
-   * .Wav -> .Mid:
+   * (.wav) -> (.mid):
       (command line) w2m melody.wav melody.mid
-   * .Mid -> Wav:
+   * (.mid) -> (.wav):
       Step 1: download file zip fluidsynth, extract it and go to the folder, copy the path and path to PATH of system environment
       Step 2: (command line) fluidsynth -ni FluidR3_GM.sf2 melody.mid -F melody.wav
 
