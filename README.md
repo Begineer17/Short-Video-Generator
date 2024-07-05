@@ -30,7 +30,7 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 You can get it [here](https://ai.google.dev/gemini-api/docs/api-key) 
 
 For combining video frames(.gif) and music(.wav) to video(.mp4) we using ffmpeg:
-   * Step 1: Download packages at [link]https://ffmpeg.org/download.html.
+   * Step 1: Download packages at [link](https://ffmpeg.org/download.html).
    * Step 2: Unzip file and copy link 'bin' folder into PATH environment. 
    
 For track generator: Click [here](https://1drv.ms/u/s!ArHNvccy1VzPkWGKXZDQY5k-kDi4?e=fFxcEq) to download the model checkpoint.
@@ -39,8 +39,8 @@ For converting beween .wav and .mid:
    * (.wav) -> (.mid):
       (command line) w2m melody.wav melody.mid
    * (.mid) -> (.wav):
-      * * Step 1: download file zip fluidsynth version 2.3.5 at [here]https://github.com/FluidSynth/fluidsynth/releases/tag/v2.3.5, extract it and copy link 'bin' folder into PATH environment.
-      * * Step 2: download file zip FluidRR3_GM.sf2 at [here]https://member.keymusician.com/Member/FluidR3_GM/index.html, extract it in this folder
+      * * Step 1: download file zip fluidsynth version 2.3.5 at [here](https://github.com/FluidSynth/fluidsynth/releases/tag/v2.3.5), extract it and copy link 'bin' folder into PATH environment.
+      * * Step 2: download file zip FluidRR3_GM.sf2 at [here](https://member.keymusician.com/Member/FluidR3_GM/index.html), extract it in this folder
       * * Step 3: (command line) fluidsynth -ni FluidR3_GM.sf2 melody.mid -F melody.wav
 
 ## 2. Inference
