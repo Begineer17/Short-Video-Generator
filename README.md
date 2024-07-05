@@ -1,25 +1,38 @@
 # Short Video Generator
 
-**THIS DOCUMENT IS FOR WINDOWS OPERATING SYSTEM ONLY**
-'You can modify freely to match your device operating system.'
+**THIS DOCUMENT IS FOR _WINDOWS_ OPERATING SYSTEM ONLY**
+
+*You can modify freely to match your device operating system*
 
 ## 1. Environment
 
-<!-- You can use python virtual enviroment or anaconda, but make sure to install python <=  -->
-
-Python environment:
+Clone repository:
 ```
+git clone https://github.com/Begineer17/Short-Video-Generator.git
+```
+
+You should create a new virtual environment to avoid conflicts with your current. You can use either **Python** or **Anaconda** to create a new environment.
+**Python** :
+```
+python -m venv env
 pip install -r requirements.txt
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
-**Notice**: Get and replace <YOUR_GEMINI_API> with your actual Gemini API key!!! 
+**Anaconda**:
+```
+conda create -n env python=3.10
+pip install -r requirements.txt
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+
+**Notice**: Get and replace <YOUR_GEMINI_API> with your actual Gemini API key!!!
+You can get it [here](https://ai.google.dev/gemini-api/docs/api-key) 
 
 For combining video frames(.gif) and music(.wav) to video(.mp4) we using ffmpeg:
    * Step 1: Download packages at link: https://ffmpeg.org/download.html.
    * Step 2: Unzip file and copy link 'bin' folder into PATH environment. 
    
-For track generator: 
-   Click [here](https://1drv.ms/u/s!ArHNvccy1VzPkWGKXZDQY5k-kDi4?e=fFxcEq) to download the model checkpoint.
+For track generator: Click [here](https://1drv.ms/u/s!ArHNvccy1VzPkWGKXZDQY5k-kDi4?e=fFxcEq) to download the model checkpoint.
 
 For converting beween .wav and .mid:
    * (.wav) -> (.mid):
@@ -49,7 +62,7 @@ make_original_video.bat
 
 #### 2.21 Usage
 
-To facilitate an environment conducive to maximizing user creativity, we aim to provide tools, resources, and support that inspire innovation and imagination. Our goal is to empower users with the means to explore their creative potential fully and to achieve their creative aspirations effectively.
+We develop advanced track change AI technology specifically designed to enhance and inspire user creativity. By leveraging state-of-the-art algorithms and innovative features, our AI tool provides users with seamless editing capabilities, encouraging creative expression and productivity
 
 #### 2.22 Running
 
@@ -58,7 +71,7 @@ Run the generation script:
 change_track.bat
 ```
 
-The generation process is fast, and you can find the results saved as 'example_data/inference/lc2dgp-childhood.mid'. You can open it with [Musescore](https://musescore.com/) for further composition. 
+The generation process is fast, and you can find the results saved as 'result/melody_changed.mid'. You can open it with [Musescore](https://musescore.com/) for further composition. 
 
 
 ### 3.Acknowledgement
