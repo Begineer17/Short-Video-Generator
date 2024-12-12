@@ -1,0 +1,161 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 HelveticaNeue-Bold;\f2\fswiss\fcharset0 Helvetica;
+\f3\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red154\green154\blue154;}
+{\*\expandedcolortbl;;\csgray\c66667;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat3\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid101\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid102\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid201\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\qj\partightenfactor0
+
+\f0\fs26 \cf0 Login + L\uc0\u7845 y access_token\
+\
+server_endpoint = \'91https://chickenitcode.github.io/tiktokAPI/'\
+\
+\pard\pardeftab560\partightenfactor0
+
+\f1\b\fs40 \cf0 Login Kit:\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b0\fs26 \cf0 <a href = \'91url\'92 > Continue with TikTok <\\a> -> 
+\f1\b Nh\uc0\u7845 n n\'fat \u273 \u7875  redirect \u273 \u7871 n trang c\u7911 a TikTok
+\f0\b0 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 import random\
+import string\
+letters = string.ascii_lowercase\
+state = ''.join(random.choice(letters) for i in range(23))\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 url = \'91{\field{\*\fldinst{HYPERLINK "https://www.tiktok.com/v2/auth/authorize/'"}}{\fldrslt https://www.tiktok.com/v2/auth/authorize/'}}\
+url += '?client_key=sbawfn3gsybacj2b99'\
+url += '&scope=user.info.basic,video.publish,video.upload,{\field{\*\fldinst{HYPERLINK "http://user.info"}}{\fldrslt user.info}}.profile,user.info.stats,video.list\'92\
+url += '&response_type=code'\
+url += '&redirect_uri=' + server_endpoint\
+url += '&state=' + state\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab560\partightenfactor0
+
+\f1\b\fs40 \cf0 After authorization:\
+\pard\pardeftab560\sa40\partightenfactor0
+
+\fs32 \cf0  1. TikTok redirect ng\uc0\u432 \u7901 i d\'f9ng tr\u7903  v\u7873  Web c\u7911 a m\'ecnh v\u7899 i nh\u7919 ng query parameters\
+\pard\pardeftab560\slleading20\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://chickenitcode.github.io/tiktokAPI/?"}}{\fldrslt 
+\f0\b0\fs26 \cf0 https://chickenitcode.github.io/tiktokAPI/?}}
+\f0\b0\fs26 \
+code = \'85 \
+scopes = \'85\
+state = \'85\
+error = \'85\
+error_description = \'85\
+-> l\uc0\u7845 y c\'e1i query parameters n\'e0y l\u432 u v\'e0o c\'e1c bi\u7871 n.\
+\
+\pard\pardeftab560\sa40\partightenfactor0
+
+\f1\b\fs32 \cf0 2. G\uc0\u7917 i request l\'ean TikTok \u273 \u7875  nh\u7853 n v\u7873  access_token\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b0\fs26 \cf0 Header:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\b \cf0 Key
+\f2\b0\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\b\fs26 \cf0 Value
+\f2\b0\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f0\fs26 \cf0 Content-Type
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f0\fs26 \cf0 application/x-www-form-urlencoded
+\f1\b \cell \lastrow\row
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+
+\f0\b0 Url = \'91{\field{\*\fldinst{HYPERLINK "https://open.tiktokapis.com/v2/oauth/token/'"}}{\fldrslt https://open.tiktokapis.com/v2/oauth/token/'}}\
+Url += \'91?client_key=sbawfn3gsybacj2b99\'92\
+Url += \'91&client_secret=qSRQWq82H5Rj9pNRbo04did0FnbVbqtH\'92\
+Url += \'91&code=\'92 + code.decode(\'91utf8\'92)\
+Url += \'91&grant_type=authorization_code\'92\
+Url += \'91&redirect_uri=\'91 + server_endpoint\
+\
+redirect(url) -> Post l\'ean tiktok\
+
+\f1\b \
+Nh\uc0\u7853 n v\u7873  ph\u7843 n h\u7891 i t\u7915  TikTok: (JSON file)\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\f3\b0\fs18 \cf0 {\listtext	\uc0\u8226 	}
+\f0\fs26 Quan tr\uc0\u7885 ng nh\u7845 t l\'e0 
+\f1\b acces_token 
+\f0\b0 nh\uc0\u432 ng n\'f3 h\u7871 t h\u7841 n sau 24g -> d\'f9ng 
+\f1\b refresh_token
+\f0\b0  \uc0\u273 \u7875  l\'e0m m\u7899 i n\'f3.\
+\ls1\ilvl0
+\f3\fs18 {\listtext	\uc0\u8226 	}
+\f1\b\fs26 refresh_token 
+\f0\b0 ho\uc0\u7841 t \u273 \u7897 ng trong back-end c\u7911 a Web m\'e0 kh\'f4ng c\u7847 n \u273 \u7891 ng \'fd t\u7915  user.\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b0 \cf0 \ul \ulc0 V\'ed d\uc0\u7909 :\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls2\ilvl1
+\fs24 \cf0 \ulnone {\listtext	\uc0\u8259 	}
+\f1\b\fs26 N\uc0\u7871 u th\'e0nh c\'f4ng: \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b0 \cf0 \{\
+    "access_token": "act.example12345Example12345Example",\
+    "expires_in": 86400,\
+    "open_id": "afd97af1-b87b-48b9-ac98-410aghda5344",\
+    "refresh_expires_in": 31536000,\
+    "refresh_token": "rft.example12345Example12345Example",\
+    "scope": "user.info.basic,video.list",\
+    "token_type": "Bearer"\
+\}\ul \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b \cf0 \ulnone \
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls3\ilvl0
+\f0\b0\fs24 \cf0 {\listtext	\uc0\u8259 	}
+\f1\b\fs26 N\uc0\u7871 u c\'f3 error:\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b0 \cf0 \{\
+    "error": "invalid_request",\
+    "error_description": "Redirect_uri is not matched with the uri when requesting code.",\
+    "log_id": "202206221854370101130062072500FFA2"\
+\}
+\f1\b \
+\pard\pardeftab560\sa40\partightenfactor0
+
+\fs32 \cf0 \
+3.Refresh access_token + Revoke: \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b0\fs26 \cf0 https://developers.tiktok.com/doc/oauth-user-access-token-management\
+}
